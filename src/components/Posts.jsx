@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import classes from './Posts.module.css';
+import classes from "./Posts.module.css";
 
 function Posts({ blogPosts }) {
   return (
@@ -8,6 +8,7 @@ function Posts({ blogPosts }) {
       {blogPosts.map((post) => (
         <li key={post.id}>
           <Link to={post.id.toString()}>
+            {console.log(post.id)}
             <h2>{post.title}</h2>
           </Link>
         </li>
